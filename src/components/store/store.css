@@ -1,0 +1,41 @@
+/* 
+#################################
+    Store Section CSS
+#################################
+*/
+
+.featured-container {
+    margin-top: 100px;
+    width: 100%;
+
+    font-family: var(--geist);
+    padding: 20px 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ftTitle {
+    width: 100%;
+}
+
+.productCards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.itemCard {
+    font-family: var(--alegreya);
+    border: 1px solid var(--btnBg);
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.itemMedia {
+    width: 300px !important;
+}
