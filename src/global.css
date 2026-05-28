@@ -41,6 +41,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Styling scrollbar cuz yes lol muehehe */
 ::-webkit-scrollbar {
     background-color: #0a0a0a;

@@ -19,19 +19,19 @@ const Featured = () => {
 
         <div className="productCards">
             <div className="itemCard">
-                <img classname='itemMedia' src="https://nativocosmetic.com/cdn/shop/files/Amor_-_Mascarilla_Hidratante_Reparadora_-_Fondo.png?v=1740091424&width=270" alt="" />
+                <img className='itemMedia' src="https://nativocosmetic.com/cdn/shop/files/Amor_-_Mascarilla_Hidratante_Reparadora_-_Fondo.png?v=1740091424&width=270" alt="" />
 
                 <h3 className="itemName">Producto 1</h3>
                 <p className="itemPrice">$10.000</p>
             </div>
             <div className="itemCard">
-                <img classname='itemMedia' src="https://nativocosmetic.com/cdn/shop/files/Amor_-_Mascarilla_Hidratante_Reparadora_-_Fondo.png?v=1740091424&width=270" alt="" />
+                <img className='itemMedia' src="https://nativocosmetic.com/cdn/shop/files/Amor_-_Mascarilla_Hidratante_Reparadora_-_Fondo.png?v=1740091424&width=270" alt="" />
 
                 <h3 className="itemName">Producto 1</h3>
                 <p className="itemPrice">$10.000</p>
             </div>
             <div className="itemCard">
-                <img classname='itemMedia' src="https://nativocosmetic.com/cdn/shop/files/Amor_-_Mascarilla_Hidratante_Reparadora_-_Fondo.png?v=1740091424&width=270" alt="" />
+                <img className='itemMedia' src="https://nativocosmetic.com/cdn/shop/files/Amor_-_Mascarilla_Hidratante_Reparadora_-_Fondo.png?v=1740091424&width=270" alt="" />
 
                 <h3 className="itemName">Producto 1</h3>
                 <p className="itemPrice">$10.000</p>

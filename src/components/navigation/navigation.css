@@ -91,3 +91,136 @@
     background: var(--btnBg);
     color: var(--darkTxt);
 }
+
+/* Start footer */
+.footer-container {
+    width: 100%;
+    height: 400px;
+    padding: 50px 40px;
+    /* background: var(--sctBg); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--montserrat);
+}
+
+.socials {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-social-logo {
+    width: 250px;
+    height: 250px;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.mediaLink {
+    color: var(--mainTxt)
+}
+
+.mediaIcon {
+    transition: all 0.2s ease;
+    height: 40px;
+}
+
+.media-wsp:hover {
+    transition: all 0.2s ease;
+    color: #25D366;
+}
+
+.media-ig:hover {
+    color : #fd5949;
+}
+
+.media-fb:hover {
+    transition: all .2s ease;
+    color: #0866ff;
+}
+
+.media-ld:hover {
+    transition: all 0.2s ease;
+    color: #007bb6;
+}
+
+/* Navigation Footer Section */
+.links-container {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 10px;
+}
+
+.linksTitle {
+    width: 100%;
+    height: 50px;
+}
+
+.linkList {
+    list-style: none;
+}
+
+.linkList .itemlink {
+    text-decoration: none;
+    color: var(--mainTxt);
+    transition: .3s ease;
+}
+
+.linkList .itemlink:hover {
+    color: var(--accentTxt2);
+}
+
+
+/*  STATIC NAVBAR THAT WILL BLE PLACE ABOVE HERO SHOP SECTION */
+.static-navbar {
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.281);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-family: var(--montserrat);
+}
+
+.brandName {
+    color: var(--thTxt);
+    font-family: var(--unbounded);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    color: var(--thTxt);
+}
+
+.link {
+    color: var(--thTxt);
+    text-decoration: none;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: var(--creamyTxt);
+}
+

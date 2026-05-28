@@ -11,6 +11,7 @@ import Featured from '../components/store/featured.jsx'
 import Manners from '../components/sections/manners.jsx'
 import About from '../components/sections/about.jsx'
 import Reviews from '../components/sections/rating.jsx'
+import Footer from '../components/navigation/footer.jsx'
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <Manners />
         <About />
         <Reviews />
+        <Footer />
     </>
   )
 }
