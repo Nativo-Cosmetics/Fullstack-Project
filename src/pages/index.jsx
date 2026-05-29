@@ -20,7 +20,6 @@ const Index = () => {
         <Navbar />
         <MainSection />
         <Featured />
-        <Catalog />
         <Manners />
         <About />
         <Reviews />

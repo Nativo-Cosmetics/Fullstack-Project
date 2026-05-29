@@ -31,8 +31,19 @@
     --scndBgSct: #F0ECE6;
     --darksectionbg: #212121;
 
+    /* Backgrounds */
+    --bg: #fff;
+    --pinky-bg: #f19c9c;
+
     /*  input styles  */
     --inputbg: #0a0a0a;
+
+    /* social media colors */
+    --fcb-bg: #3b5998;
+    --ttt-bg: #1da1f2;
+    --igm-bg: #e1306c;
+    --ldn-bg: #0077b5;
+    --wsp-bg: #25d366;
 }
 
 * {

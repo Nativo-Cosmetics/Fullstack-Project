@@ -14,11 +14,11 @@ const Navbar = () => {
             <div className="navlist">
             <Link className='link home-link' to="/">Inicio</Link>
             <Link className='link store-link' to="/tienda">Tienda</Link>
-            <Link className='link contact-link' to="/">Contacto</Link>
+            <Link className='link contact-link' to="/register">Contacto</Link>
             <Link className='link catalog-link' to="/catalog">Catalogo</Link>
         </div>
         <div className="btn-container">
-            <Link className='redirectBtn storeBtn' to='/'>Tienda</Link>
+            <Link className='redirectBtn storeBtn' to='/register'>Iniciar sesión</Link>
             <Link className='redirectBtn bookingBtn' to='/'>Agenda tu hora!</Link>
         </div>
         </div>

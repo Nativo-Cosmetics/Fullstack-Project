@@ -32,20 +32,21 @@
 }
 
 .navlist .link {
-    width: 100px;
+    padding: 0 15px;
     height: 70px;
     font-family: var(--montserrat);
     color: var(--mainTxt);
     text-decoration: none;
     line-height: 70px;
     text-align: center;
+    position: relative;
 }
 
 .navlist .link::before {
     content: '';
-    width: 100px;
+    width: 100%;
     height: 70px;
-    margin-left: -29px;
+    left: 0;
     background: var(--accentTxt);
     position: absolute;
     transform: scaleY(0);
@@ -55,18 +56,15 @@
     pointer-events: none;
 }
 
+.navlist .link:hover {
+    color: var(--thTxt);
+}
+
 .navlist .link:hover::before {
     transform: scaleY(1);
     transform-origin: bottom;
 }
 
-.store-link::before {
-    margin-left: -24px !important;
-}
-
-.contact-link::before {
-    margin-left: -14px !important;
-}
 
 .btn-container {
     margin: 5px 20px;
@@ -80,11 +78,16 @@
     text-decoration: none;
     cursor: pointer;
     font-family: var(--montserrat);
+    transition: all 0.2s ease;
 }
 
 .storeBtn {
     background: var(--mainBtnBg);
     color: var(--thTxt);
+}
+
+.storeBtn:hover {
+    background: var(--accentTxt);
 }
 
 .bookingBtn {
@@ -135,21 +138,21 @@
 
 .media-wsp:hover {
     transition: all 0.2s ease;
-    color: #25D366;
+    color: var(--wsp-bg);
 }
 
 .media-ig:hover {
-    color : #fd5949;
+    color : var(--igm-bg);
 }
 
 .media-fb:hover {
     transition: all .2s ease;
-    color: #0866ff;
+    color: var(--fcb-bg);
 }
 
 .media-ld:hover {
     transition: all 0.2s ease;
-    color: #007bb6;
+    color: var(--ldn-bg);
 }
 
 /* Navigation Footer Section */
@@ -224,3 +227,43 @@
     color: var(--creamyTxt);
 }
 
+/*
+
+===============================
+UserNav that shows in register and login pages, it is the same as the default navbar, but  with some changes.
+===============================
+*/
+.user-nav-container {
+    width: 100%;
+    height: 70px;
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-family: var(--montserrat);
+}
+
+.brandName {
+    color: var(--mainTxt);
+    font-family: var(--unbounded);
+}
+
+.navlist {
+    height: 70px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+}
+
+.itemlink {
+    color: var(--mainTxt);
+    text-decoration: none;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.itemlink:hover {
+    color: var(--creamyTxt);
+}
