@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/index.jsx'
 import Shop from './pages/store.jsx'
+import Catalog from './components/store/catalog.jsx'
+
 
 import './global.css'
 
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/tienda' element={<Shop />} />
+        <Route path='/catalog' element={<Catalog />} />
+
       </Routes>
     </>
   )
