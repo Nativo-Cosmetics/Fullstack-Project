@@ -15,7 +15,7 @@ const Navbar = () => {
             <Link className='link home-link' to="/">Inicio</Link>
             <Link className='link store-link' to="/tienda">Tienda</Link>
             <Link className='link contact-link' to="/register">Contacto</Link>
-            <Link className='link catalog-link' to="/catalog">Catalogo</Link>
+            <Link className='link catalog-link' to="/catalogo">Catálogo</Link>
         </div>
         <div className="btn-container">
             <Link className='redirectBtn storeBtn' to='/register'>Iniciar sesión</Link>
