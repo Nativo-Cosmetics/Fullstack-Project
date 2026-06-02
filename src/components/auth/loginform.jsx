@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './auth.css'
+import { Link } from 'react-router-dom'
 
 
 const LogForm = () => {
@@ -107,7 +108,7 @@ const LogForm = () => {
             <button 
             className='signin-form-btn'
             onClick={handleLogin}>
-              Entrar
+              <Link to='/profile'>Entrar</Link>
             </button>
 
             {loginError && <span style={{color: 'red', fontFamily: 'var(--montserrat)', fontSize: '14px'}}>{loginError}</span>}

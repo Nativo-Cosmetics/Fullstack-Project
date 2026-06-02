@@ -11,12 +11,7 @@ import Featured from '../components/store/featured.jsx'
 import Catalog from '../components/store/catalog.jsx'
 import Manners from '../components/sections/manners.jsx'
 import About from '../components/sections/about.jsx'
-<<<<<<< HEAD
-import Reviews from '../components/sections/rating.jsx'
-import Footer from '../components/navigation/footer.jsx'
-=======
 import Reviews from '../components/sections/reviews.jsx'
->>>>>>> d7e1017 (Actualizacion de archivos)
 
 const Index = () => {
   return (

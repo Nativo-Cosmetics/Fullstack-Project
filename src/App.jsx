@@ -4,6 +4,7 @@ import Shop from './pages/store.jsx'
 import CatalogPage from './pages/CatalogPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage.jsx'
 import Register from './pages/register.jsx'
+import Profile from './pages/profile.jsx'
 
 import './global.css'
 
@@ -17,6 +18,7 @@ function App() {
         <Route path='/catalogo/:productId' element={<ProductDetailPage />} />
         <Route path='/catalog' element={<Navigate replace to='/catalogo' />} />
         <Route path='/register' element={<Register />} />
+        <Route path='/profile' element={<Profile />} />
       </Routes>
     </>
   )
