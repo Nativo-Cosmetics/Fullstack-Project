@@ -7,8 +7,8 @@ import Hero from '../components/sections/hero.jsx'
 const Shop = () => {
   return (
     <div className='shop-container'>
-      <Hero />
       <StaticNavbar />
+      <Hero />
     </div>
   )
 }

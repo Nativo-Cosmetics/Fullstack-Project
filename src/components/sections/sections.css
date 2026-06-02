@@ -17,6 +17,7 @@ INDEX PAGE
     width: 450px;
     height: 400px;
     padding: 20px 30px;
+    margin-top: 10px;
     text-align: justify;
     color: var(--thTxt);
     background: var(--sctBg);
