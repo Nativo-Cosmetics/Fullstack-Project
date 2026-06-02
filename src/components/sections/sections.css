@@ -235,6 +235,119 @@ Reviews from clients for some products
     padding: 2px 7px;
 }
 
+.reviews-section {
+    width: 100%;
+    padding: 4rem 100px;
+    margin-top: 4rem;
+    background: var(--sctBg);
+}
+
+.reviews-header {
+    max-width: 720px;
+    margin-bottom: 2rem;
+}
+
+.reviews-header h2 {
+    font-family: var(--trirong);
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.reviews-header p {
+    font-family: var(--montserrat);
+    font-size: 1rem;
+    color: var(--thTxt);
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.review-card {
+    width: calc(33% - 1rem);
+    min-width: 280px;
+    background: var(--mainBg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.review-avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--mainTxt);
+}
+
+.review-name {
+    font-family: var(--alegreya);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.review-text {
+    font-family: var(--montserrat);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--thTxt);
+    margin: 0;
+}
+
+.review-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.star-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.star-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.star-rating {
+    font-family: var(--geist);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 950px) {
+    .reviews-section,
+    .preview-review-container {
+        padding: 2rem 20px;
+    }
+
+    .review-card,
+    .reviewCard {
+        width: 100%;
+    }
+}
+
 .username {
     font-family: var(--alegreya);
     font-size: 14px;
