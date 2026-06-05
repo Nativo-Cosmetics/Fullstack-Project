@@ -73,7 +73,7 @@ const LogForm = () => {
 
     console.log(newUser)
 
-    setTiimeout(async () => {
+    setTimeout(async () => {
       try {
         const response = await fetch('http://localhost:8080/api/create', {
           method: 'POST',
@@ -85,7 +85,7 @@ const LogForm = () => {
 
         const data = await response.json()
         if (data.status === 'success' && data.user){
-          console.alert('Usuario creado exitosamente.')
+          console.log('Usuario creado exitosamente.')
 
           if(data.user.email.endsWidth('@nativo-cosmetics.com')) {
             navigate('/dashboard')
