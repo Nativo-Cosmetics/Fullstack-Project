@@ -12,6 +12,7 @@ import Catalog from '../components/store/catalog.jsx'
 import Manners from '../components/sections/manners.jsx'
 import About from '../components/sections/about.jsx'
 import Reviews from '../components/sections/reviews.jsx'
+import Footer from '../components/navigation/footer.jsx'
 
 const Index = () => {
   return (

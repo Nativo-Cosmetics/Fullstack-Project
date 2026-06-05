@@ -1,46 +1,106 @@
-import React, { useState } from 'react'
+import React, { use, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import './auth.css'
-import { Link } from 'react-router-dom'
-
 
 const LogForm = () => {
 
-  const mockUsers = [
-    {
-      "email": "test@nativo.com",
-      "password": "1234",
-      "name": "user"
-    },
-    {
-      "email": "admin@nativo.com",
-      "password": "admin1234",
-      "name": "admin"
-    }
-  ]
-
-  const [loginError, setLoginError] = useState('')
+  // toggle visibility of forms
+  const [toggleForm, setToggleForm] = useState(false)
 
   const handleToggle = (e) => {
     e.preventDefault()
     setToggleForm(prev => !prev)
   }
+  
+  /***
+    Login user 
+   */
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const navigate = useNavigate()
 
-  // Logical managment
-  const [toggleForm, setToggleForm] = useState(false)
-
-  const handleLogin = (e) => {
+  // search user in db 
+  const checkUser = async (e) => {
     e.preventDefault()
-    const user = mockUsers.find(u => u.email === email && u.password === password)
 
-    if (user) {
-      alert(`Bienvenido ${user.name}`)
-    } else {
-      setLoginError('Correo o contraseña incorrectos')
+    let validatedUser = {
+      email: email,
+      password: password
+    }
+
+    try {
+      const response = await fetch('http://localhost:8080/api/getUser', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(validatedUser)
+      })
+
+      const data = await response.json()
+      console.log(data)
+      if (data.status === 'success' && data.user.email) {
+        localStorage.setItem('name', data.user)
+      
+        console.log('Usuario encontrado:', data)
+        navigate('/profile')
+      } else {
+        alert(data.message || 'Error al iniciar sesión')
+      }
+    } catch (error) {
+      console.error('Error al iniciar sesión:', error)
     }
   }
 
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+
+  /***
+    Register user 
+  */
+  const [newName, setNewName] = useState('')
+  const [newLastName, setNewLastName] = useState('')
+  const [newEmail, setNewEmail] = useState('')
+  const [newPassword, setNewPassword] = useState('')
+
+  const registerUser = (e) => {
+    e.preventDefault()
+
+    let newUser = {
+      name: newName,
+      lastName: newLastName,
+      email: newEmail,
+      password: newPassword
+    }
+
+    console.log(newUser)
+
+    setTiimeout(async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/create', {
+          method: 'POST',
+          headers: {
+            'Content-Type' : 'application/json' 
+          },
+          body: JSON.stringify(newUser)
+        })
+
+        const data = await response.json()
+        if (data.status === 'success' && data.user){
+          console.alert('Usuario creado exitosamente.')
+
+          if(data.user.email.endsWidth('@nativo-cosmetics.com')) {
+            navigate('/dashboard')
+          }
+          else if(data.user.email.endsWidth('@gmail.com' || '@hotmail.com' || '@outlook.com')) {
+            navigate('/profile')
+          } else{
+            alert('El correo utilizado no está permitido en la plataforma, por favor vuelve a intentar.')
+          }
+        }
+      } catch(error) {
+        console.log('Error en la petición: ' + error)
+      }
+    }, 1000)
+  }
 
   return (
     <div className='form-container'>
@@ -62,14 +122,13 @@ const LogForm = () => {
           className="signin-form"
           style={{ display: toggleForm ? 'none' : 'flex' }}>
           <h2 className="form-title">Regístrate</h2>
-          <div className="signIn">
-            <input className="signin-input" type="text" placeholder='Nombre' />
-            <input className="signin-input" type="text" placeholder='Apellido' />
-            <input className="signin-input" type="email" placeholder='Correo Electrónico' />
-            <input className="signin-input" type="password" placeholder='Contraseña' />
-            <input className="signin-input" type="password" placeholder='Confirmar Contraseña' />
-            <button className='signin-form-btn'>Registrarse</button>
-          </div>
+          <form className="signIn" onSubmit={registerUser}>
+            <input className="signin-input" type="text" placeholder='Nombre' value={newName} onChange={e => setNewName(e.target.value)}/>
+            <input className="signin-input" type="text" placeholder='Apellido' value={newLastName} onChange={e => setNewLastName(e.target.value)}/>
+            <input className="signin-input" type="email" placeholder='Correo Electrónico' value={newEmail} onChange={e => setNewEmail(e.target.value)}/>
+            <input className="signin-input" type="password" placeholder='Contraseña' value={newPassword} onChange={e => setNewPassword(e.target.value)}/>
+            <button className='signin-form-btn' type='submit'>Registrarse</button>
+          </form>
         </div>
       </div>
 
@@ -88,12 +147,15 @@ const LogForm = () => {
         </div>
         <div
           className="signup-form"
-          style={{ display: toggleForm ? 'flex' : 'none' }}>
+          style={{ display: toggleForm ? 'flex' : 'none' }}
+          onSubmit={checkUser}
+          >
           <h2 className="form-title">Bienvenid@</h2>
-          <div className="signUp">
+          <form className="signUp">
             <input 
             className="signup-input" 
-            type="email" 
+            type="text"
+            id='email' 
             placeholder='Correo Electrónico' 
             value={email} 
             onChange={(e) => setEmail(e.target.value)} />
@@ -101,18 +163,18 @@ const LogForm = () => {
             <input 
             className="signup-input" 
             type="password" 
+            id="pass"
             placeholder='Contraseña' 
             value={password}
             onChange={(e) => setPassword(e.target.value)}/>
 
             <button 
             className='signin-form-btn'
-            onClick={handleLogin}>
-              <Link to='/profile'>Entrar</Link>
+            type='submit'>
+              Entrar
             </button>
 
-            {loginError && <span style={{color: 'red', fontFamily: 'var(--montserrat)', fontSize: '14px'}}>{loginError}</span>}
-          </div>
+          </form>
         </div>
       </div>
     </div>
