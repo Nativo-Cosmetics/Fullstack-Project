@@ -17,6 +17,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Import routes
+import userRoutes from './routes/userRoutes.js';
+
 // Test route
 app.get('/testing', (req, res) => {
     return res.status(200).json([{
@@ -30,6 +33,8 @@ app.get('/testing', (req, res) => {
     }
     ])
 })
+
+app.use('/api', userRoutes)
 
 app.listen(port, () =>{
     console.log(`Server running on port ${port}`)
