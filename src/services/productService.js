@@ -72,3 +72,38 @@ export const getCategoriesSummary = async () => {
     maxPrice: priceBounds[0]?.maxPrice ?? 0,
   }
 }
+
+export const createProducto = async (productData) => {
+  const { nombreProducto, descripcionProducto, precio, categoria, imagen, stock } = productData
+
+  const newProduct = new Product({
+    nombreProducto,
+    descripcionProducto,
+    precio,
+    categoria,
+    imagen,
+    stock: stock !== undefined ? stock : 0,
+  })
+
+  await newProduct.save()
+  return newProduct.toObject()
+}
+
+export const updateProducto = async (id, productData) => {
+  const updateData = {}
+
+  if (productData.nombreProducto !== undefined) updateData.nombreProducto = productData.nombreProducto
+  if (productData.descripcionProducto !== undefined) updateData.descripcionProducto = productData.descripcionProducto
+  if (productData.precio !== undefined) updateData.precio = productData.precio
+  if (productData.categoria !== undefined) updateData.categoria = productData.categoria
+  if (productData.imagen !== undefined) updateData.imagen = productData.imagen
+  if (productData.stock !== undefined) updateData.stock = productData.stock
+
+  const product = await Product.findByIdAndUpdate(id, updateData, { new: true }).lean()
+  return product
+}
+
+export const deleteProducto = async (id) => {
+  const product = await Product.findByIdAndDelete(id).lean()
+  return product
+}
