@@ -6,6 +6,7 @@ import ProductDetailPage from './pages/ProductDetailPage.jsx'
 import Register from './pages/register.jsx'
 import Profile from './pages/profile.jsx'
 import AdminProducts from './admin/AdminProducts.jsx'
+import AdminReports from './admin/AdminReports.jsx'
 
 import './global.css'
 
@@ -21,6 +22,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='/admin/productos' element={<AdminProducts />} />
+        <Route path='/admin/reportes' element={<AdminReports />} />
       </Routes>
     </>
   )

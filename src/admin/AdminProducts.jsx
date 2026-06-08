@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { fetchProducts, createProduct, updateProduct, deleteProduct } from '../catalog/api.js'
 import './AdminProducts.css'
 
@@ -135,6 +136,15 @@ const AdminProducts = () => {
 
   return (
     <div className='admin-container'>
+      <nav style={{ display: 'flex', gap: '15px', marginBottom: '20px', borderBottom: '1px solid #ddd', paddingBottom: '10px' }}>
+        <Link to="/admin/productos" style={{ textDecoration: 'none', color: '#7f8a57', fontWeight: 'bold', borderBottom: '2px solid #7f8a57' }}>
+          Productos
+        </Link>
+        <Link to="/admin/reportes" style={{ textDecoration: 'none', color: '#666', fontWeight: 'bold' }}>
+          Reportes
+        </Link>
+      </nav>
+
       <div className='admin-header'>
         <h1>Gestión de Productos</h1>
         <button className='btn-new' onClick={handleNewProduct}>
