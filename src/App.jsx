@@ -8,6 +8,8 @@ import Profile from './pages/profile.jsx'
 import Cart from './pages/CartPage.jsx'
 import UserPage from './pages/userPage.jsx'
 import PaymentPage from './pages/paymentPage.jsx'
+import AdminProducts from './admin/AdminProducts.jsx'
+import AdminReports from './admin/AdminReports.jsx'
 
 import './global.css'
 
@@ -25,6 +27,10 @@ function App() {
         <Route path='/profile' element={<Profile />} />
         <Route path='/user' element={<UserPage />} />
         <Route path='payment' element={<PaymentPage />}/>
+        <Route path='/register' element={<Register />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/admin/productos' element={<AdminProducts />} />
+        <Route path='/admin/reportes' element={<AdminReports />} />
       </Routes>
     </>
   )

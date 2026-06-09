@@ -5,7 +5,7 @@ import Logo from '../../assets/img/nativo-logo.png'
 
 
 const Navbar = () => {
-  return (
+    return (
     <div className='navbar-container'>
         <div className="img-container">
             <img src={Logo} alt="Logo" />

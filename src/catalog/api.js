@@ -44,3 +44,53 @@ export const fetchCategoriesSummary = async () => {
   }
   return response.json()
 }
+
+export const createProduct = async (productData) => {
+  const response = await fetch(`${API_BASE}/api/productos`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+  })
+
+  if (!response.ok) {
+    const error = await response.json()
+    throw new Error(error.message || 'Error al crear producto')
+  }
+
+  return response.json()
+}
+
+export const updateProduct = async (id, productData) => {
+  const response = await fetch(`${API_BASE}/api/productos/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(productData),
+  })
+
+  if (!response.ok) {
+    const error = await response.json()
+    throw new Error(error.message || 'Error al actualizar producto')
+  }
+
+  return response.json()
+}
+
+export const deleteProduct = async (id) => {
+  const response = await fetch(`${API_BASE}/api/productos/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+
+  if (!response.ok) {
+    const error = await response.json()
+    throw new Error(error.message || 'Error al eliminar producto')
+  }
+
+  return response.json()
+}
