@@ -1,0 +1,91 @@
+.detailContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(320px, 1.05fr) 0.95fr;
+  gap: 48px;
+  align-items: start;
+  padding: 40px 0;
+}
+
+.imageSection {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.summarySection {
+  display: grid;
+  gap: 24px;
+  max-width: 680px;
+}
+
+.category {
+  display: inline-flex;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(31, 29, 26, 0.85);
+  color: #fff;
+  font-family: var(--montserrat);
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+.name {
+  font-family: var(--trirong);
+  font-size: 2.7rem;
+  color: var(--mainTxt);
+  line-height: 1.05;
+}
+
+.price {
+  font-family: var(--unbounded);
+  font-size: 2rem;
+  color: var(--accentTxt2);
+}
+
+.description {
+  font-family: var(--montserrat);
+  color: var(--headTxt);
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.addButton {
+  border: none;
+  background: var(--mainBtnBg);
+  color: var(--thTxt);
+  font-family: var(--montserrat);
+  font-size: 1rem;
+  padding: 16px 28px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background: var(--accentTxt2);
+}
+
+@media (max-width: 980px) {
+  .detailContainer {
+    grid-template-columns: 1fr;
+  }
+  .image {
+    min-height: 360px;
+  }
+}

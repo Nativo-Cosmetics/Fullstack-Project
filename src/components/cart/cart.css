@@ -1,0 +1,348 @@
+/* ─── Variables ─── */
+:root {
+  --green: #4a7c59;
+  --green-light: #6aab7a;
+  --green-muted: #c8dece;
+  --red: #c0392b;
+  --gray-bg: #d9d9d9;
+  --gray-selector: #b0b0b0;
+  --border: #c4c4c4;
+  --text: #222;
+  --text-muted: #777;
+  --card-bg: #d9d9d9;
+}
+
+/* ─── Título ─── */
+.title-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 32px 0;
+}
+
+.title-cart h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: var(--unbounded);
+  color: var(--text);
+}
+
+/* ─── Layout principal ─── */
+.cart-container {
+  display: flex;
+  gap: 24px;
+  padding: 24px 32px;
+  align-items: flex-start;
+}
+
+/* ─── Columna izquierda ─── */
+.products-list {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ─── Card de cada producto ─── */
+.products-container {
+  display: flex;
+  align-items: stretch;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  margin-bottom: 12px;
+  background: var(--card-bg);
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.products-container.product-selected {
+  border-color: var(--green);
+}
+
+/* ─── Barra lateral izquierda con botón circular centrado ─── */
+.product-selector-bar {
+  width: 38px;
+  flex-shrink: 0;
+  background: var(--gray-selector);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+/* cuando el producto está seleccionado, la barra entera se pone verde */
+.products-container.product-selected .product-selector-bar {
+  background: var(--green);
+}
+
+/* ─── Botón circular dentro de la barra ─── */
+.product-selector-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2.5px solid #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  flex-shrink: 0;
+}
+
+.product-selector-btn:hover {
+  transform: scale(1.15);
+  background: rgba(255,255,255,0.3);
+}
+
+/* activo: círculo blanco relleno */
+.product-selector-btn.selector-active {
+  background: #fff;
+}
+
+/* ─── Contenido del producto ─── */
+.product-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+/* ─── Imagen ─── */
+.product-img img {
+  object-fit: contain;
+  border-radius: 8px;
+  background: transparent;
+}
+
+/* ─── Nombre ─── */
+.product-name {
+  flex: 1;
+  min-width: 120px;
+}
+
+.product-name h2 {
+  font-size: 23px;
+  font-weight: 700;
+  color: var(--text);
+  font-family: var(--unbounded);
+}
+
+/* ─── Precio ─── */
+.product-price {
+  min-width: 80px;
+  font-family: var(--unbounded);
+}
+
+.product-price p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.unit-price {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ─── Contador ─── */
+.counterProducts {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 3px 10px;
+  background: #fff;
+}
+
+.counterProducts button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: var(--text);
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.15s;
+}
+
+.counterProducts button:hover {
+  background: var(--border);
+}
+
+.counterProducts span {
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ─── Botón eliminar (círculo rojo) ─── */
+.product-delete button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--red);
+  border: none;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.product-delete button:hover {
+  background: #a93226;
+  transform: scale(1.1);
+}
+
+/* ─── Carrito vacío ─── */
+.empty-cart {
+  text-align: center;
+  padding: 48px 0;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-family: var(--unbounded);
+}
+
+/* ─── Vaciar carrito ─── */
+.remove-all-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.btn-remove-all {
+  background: none;
+  border: 1.5px solid var(--red);
+  color: var(--red);
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-remove-all:hover {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ─── Panel de resumen ─── */
+.resume-cart {
+  min-width: 280px;
+  max-width: 320px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  background: #fff;
+  position: sticky;
+  top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.resume-cart h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text);
+  font-family: var(--unbounded);
+}
+
+.resume-empty {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  flex: 1;
+  font-family: var(--unbounded);
+}
+
+/* ─── Lista del resumen ─── */
+.resume-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-height: 40px;
+}
+
+.resume-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+}
+
+.resume-item-name {
+  flex: 1;
+  color: var(--text);
+}
+
+.resume-item-qty {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.resume-item-price {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ─── Divisor y total — siempre visibles ─── */
+.resume-divider {
+  border: none;
+  border-top: 1.5px solid var(--border);
+  margin: 14px 0 12px;
+}
+
+.resume-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: var(--unbounded);
+}
+
+/* ─── Botón proceder al pago — siempre abajo ─── */
+.btn-checkout {
+  width: 100%;
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.2s, transform 0.1s;
+  
+}
+
+.btn-checkout:hover:not(:disabled) {
+  background: var(--green-light);
+}
+
+.btn-checkout:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-checkout:disabled {
+  background: var(--green-muted);
+  color: #aaa;
+  cursor: not-allowed;
+}
