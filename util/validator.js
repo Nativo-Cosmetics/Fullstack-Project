@@ -69,7 +69,7 @@ export const validateUser = (u) => {
 
 */
 
-export const checkArticle = (params) => {
+export const checkItem = (params) => {
     let checkName = !validator.isEmpty(params.name) &&
                     validator.isLength(params.name, {min: 1})
 
@@ -83,7 +83,7 @@ export const checkArticle = (params) => {
     }
 }
 
-export const checkIdArticle = (id) => {
+export const checkIdItem = (id) => {
     let checkId = !validator.isEmpty(id) && validator.isLength(id, { min: 24, max: 24 })
 
     if (!checkId) {

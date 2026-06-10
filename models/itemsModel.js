@@ -31,3 +31,5 @@ const itemSchema = new Schema({
         default: 'item.webp',
     }
 })
+
+export default model('Item', itemSchema, 'items')

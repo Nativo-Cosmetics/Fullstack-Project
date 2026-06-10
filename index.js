@@ -1,5 +1,5 @@
+import dotenv from 'dotenv'
 import { connectDB } from './db/conecction.js';
-
 import express from 'express';
 import cors from 'cors';
 
@@ -13,7 +13,11 @@ const app = express();
 const port = 8080;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: process.env.FRONTEND_URL,
+    credentials: true
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
