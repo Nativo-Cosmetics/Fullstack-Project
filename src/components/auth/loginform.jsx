@@ -64,6 +64,14 @@ const LogForm = () => {
   const registerUser = (e) => {
     e.preventDefault()
 
+    /* 
+    @params
+    name = str
+    lastname = str
+    email = str
+    password = str
+    */
+   
     let newUser = {
       name: newName,
       lastName: newLastName,
@@ -83,12 +91,16 @@ const LogForm = () => {
           body: JSON.stringify(newUser)
         })
 
+
         const data = await response.json()
         if (data.status === 'success' && data.user){
           console.log('Usuario creado exitosamente.')
 
-          if(data.user.email.endsWidth('@nativo-cosmetics.com')) {
+          // separated login between user, worker or admin/owner
+          if(data.user.email.endsWidth('@nativocosmetics.com')) {
             navigate('/dashboard')
+          } else if(data.user.email.endsWidth('@admin.nativocosmetics.com')) {
+            navigate('/admin/dashboard')
           }
           else if(data.user.email.endsWidth('@gmail.com' || '@hotmail.com' || '@outlook.com')) {
             navigate('/profile')

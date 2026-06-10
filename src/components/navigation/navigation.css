@@ -202,7 +202,7 @@
     font-family: var(--montserrat);
 }
 
-.brandName {
+.static-navbar .brandName {
     color: var(--thTxt);
     font-family: var(--unbounded);
     font-size: 24px;

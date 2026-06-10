@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useSearchParams, useNavigate, Link } from 'react-router-dom'
 
-import UserNav from '../components/navigation/userNav.jsx'
-import Navbar from '../components/navigation/navbar.jsx'
 import SearchBar from '../catalog/SearchBar.jsx'
 import FiltersSidebar from '../catalog/FiltersSidebar.jsx'
 import SortSelector from '../catalog/SortSelector.jsx'
@@ -146,8 +144,6 @@ const CatalogPage = () => {
 
   return (
     <>
-    <UserNav/>
-      <Navbar />
       <main className={styles.catalogPage}>
         <div className={styles.topSection}>
           <div>
