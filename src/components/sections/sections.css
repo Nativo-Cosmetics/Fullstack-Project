@@ -1,0 +1,377 @@
+/* 
+############################################
+INDEX PAGE
+############################################
+
+*/
+
+/*  Banner de la página principal
+    Video looped, & texto super puesto
+*/
+.main-section-container {
+    width: 100%;
+    height: 400px;
+}
+
+.context-info {
+    width: 450px;
+    height: 400px;
+    padding: 20px 30px;
+    margin-top: 10px;
+    text-align: justify;
+    color: var(--thTxt);
+    background: var(--sctBg);
+    position: relative;
+}
+
+.context-info::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100px;
+    height: 400px;
+    aspect-ratio: 1;
+    clip-path: polygon(0 0,100% 0,0 100%);
+    background: var(--sctBg);
+}
+.context-title {
+    font-family: var(--trirong);
+    font-weight: 200;
+    font-size: 2.1em;
+    /* font-family:  var(--splineSans); */
+}
+
+.context {
+    font-family: var(--montserrat);
+}
+
+
+/* 
+SECCION DE VALORES DE NATIVO COSMETICS
+Misión | Visión | Valores
+*/
+.manners-container {
+    width: 100%;
+    margin-top: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 100px;
+    background: var(--scndBgSct);
+}
+
+.triple {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--mainTxt);
+}
+
+.valueTitle {
+    font-family: var(--alegreya);
+}
+
+.valueDesc {
+    font-family: var(--inter);
+    font-size: 15px;
+}
+
+.triple, .native-brand {
+    width: 30rem;
+    height: 30rem;
+}
+
+.valores {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+}
+
+ul.valueDesc {
+    list-style: none;
+}
+
+.native-brand-logo {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.native-brand {
+    position: relative;
+}
+
+/* 
+ESTE TEXTO ES TOTALMENTE OPCIONAL PUEDES COMENTARLO PARA
+QUE NO SE MUESTRE EN LA WEB O PUEDES DEJARLO.
+*/
+.native-brand::before {
+    content: 'Nuestra empresa';
+    position: absolute;
+    font-family: var(--cinzel);
+    font-size: 48px;
+    top: -68px;
+    width: 100%;
+    text-align: center;
+    /* word-spacing: 0.2em; */
+    letter-spacing: .4em;
+    line-height: 48px;
+    z-index: 10;
+    color: var(--mainTxt);
+}
+
+/* Sección sobre nostros */
+.aboutUs-container {
+    width: 100%;
+    padding: 20px 100px;
+    margin-top: 8em;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.whoIs, .aboutOwner {
+    width: 30em;
+    height: 30em;
+}
+
+.whoIs .imgOwner {
+    width: 30em;
+    height: 30em;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.aboutOwner {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: var(--mainTxt);
+    font-family: var(--montserrat);
+}
+
+.ownerName {
+    font-family: var(--trirong);
+    font-weight: 200;
+    font-size: 44px;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+.ownerName::before {
+    content: 'Fundador';
+    text-transform: uppercase;
+    font-family: var(--geist);
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+}
+
+.ownerName::selection {
+    background: var(--accentTxt);
+}
+
+.aboutTxt {
+    font-size: 16px;
+    margin-top: 1em;
+}
+
+.aboutTxt::selection {
+    background: var(--accentTxt);
+}
+
+/* 
+################################
+Reviews from clients for some products
+################################
+
+*/
+
+.preview-review-container {
+    width: 100%;
+    margin-top: 4em;
+    padding: 20px 100px;
+    overflow-x: visible;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.reviewsTitle {
+    width: 100%;
+    font-family: var(--geist);
+}
+
+.reviewCard {
+    width: 30%;
+    font-family: var(--alegreya);
+    display: flex;
+    padding: 5px 7px;
+    border-radius: 5px;
+    border: 1px solid var(--btnBg);
+}
+
+.userPfp-container {
+    display: flex;
+    align-items: start;
+    padding: 20px 0;
+}
+
+.userPfp-container {
+    width: 10%;
+}
+
+.resume {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: space-around;
+    padding: 2px 7px;
+}
+
+.reviews-section {
+    width: 100%;
+    padding: 4rem 100px;
+    margin-top: 4rem;
+    background: var(--sctBg);
+}
+
+.reviews-header {
+    max-width: 720px;
+    margin-bottom: 2rem;
+}
+
+.reviews-header h2 {
+    font-family: var(--trirong);
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.reviews-header p {
+    font-family: var(--montserrat);
+    font-size: 1rem;
+    color: var(--thTxt);
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.review-card {
+    width: calc(33% - 1rem);
+    min-width: 280px;
+    background: var(--mainBg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.review-avatar {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.review-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    color: var(--mainTxt);
+}
+
+.review-name {
+    font-family: var(--alegreya);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.review-text {
+    font-family: var(--montserrat);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--thTxt);
+    margin: 0;
+}
+
+.review-stars {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.star-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.star-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.star-rating {
+    font-family: var(--geist);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 950px) {
+    .reviews-section,
+    .preview-review-container {
+        padding: 2rem 20px;
+    }
+
+    .review-card,
+    .reviewCard {
+        width: 100%;
+    }
+}
+
+.username {
+    font-family: var(--alegreya);
+    font-size: 14px;
+}
+
+.description {
+    font-size: 12px;
+    line-height: 1.5cap;
+    font-family: var(--montserrat);
+}
+
+.img {
+    width: 100%;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+    font-family: var(--geist);
+    font-size: 14px;
+}
+
+.icon {
+    width: 15px;
+}
+

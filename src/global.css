@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spline+Sans:wght@300..700&family=Trispace:wght@100..800&family=Unbounded:wght@200..900&family=Instrument+Serif:ital@0;1&family=Cinzel:wght@400..900&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /*  Estableciendo las variables de estilo globales */
+    --splineSans: 'Spline Sans', sans-serif;
+    --inter: 'Inter', sans-serif;
+    --trispace: 'Trispace', monospace;
+    --alegreya: 'Alegreya', serif;
+    --montserrat: 'Montserrat', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+    --geist: 'Geist', sans-serif;
+    --unbounded: 'Unbounded', cursive, sans-serif;
+    --cinzel: 'Cinzel', serif;
+    --instrument: 'Instrument Serif', serif;
+    --trirong: 'Trirong', serif;
+
+    /*  colorss */
+    --mainTxt: #292929;
+    --headTxt: #4c4c4c;
+    --descTxt: #b9b9b9;
+    --darkTxt: #333;
+    --thTxt: #fefefe;
+    /*  components variables */
+    --creamyTxt: #ada46c;
+    --accentTxt: #7f8a57;
+    --accentTxt2: #4a6140;
+    
+    --mainBtnBg: #000;
+    --sctBg: #1a1a1a;
+    --btnBg: #afafaf;
+    --scndBgSct: #F0ECE6;
+    --darksectionbg: #212121;
+
+    /* Backgrounds */
+    --bg: #fff;
+    --pinky-bg: #f19c9c;
+
+    /*  input styles  */
+    --inputbg: #0a0a0a;
+
+    /* social media colors */
+    --fcb-bg: #3b5998;
+    --ttt-bg: #1da1f2;
+    --igm-bg: #e1306c;
+    --ldn-bg: #0077b5;
+    --wsp-bg: #25d366;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling scrollbar cuz yes lol muehehe */
+::-webkit-scrollbar {
+    background-color: #0a0a0a;
+    width: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--creamyTxt) !important;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accentTxt2) !important;
+}

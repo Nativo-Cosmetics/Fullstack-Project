@@ -1,0 +1,29 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pageButton {
+  min-width: 44px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  color: var(--mainTxt);
+  cursor: pointer;
+  font-family: var(--montserrat);
+  font-weight: 600;
+}
+
+.pageButton:hover:not(:disabled) {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.active {
+  background: var(--accentTxt2);
+  color: var(--thTxt);
+  border-color: transparent;
+}

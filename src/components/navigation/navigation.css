@@ -1,0 +1,272 @@
+.navbar-container {
+    width: 100%;
+}
+
+.img-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    width: 80px;
+    height: 80px;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    /* border: 1px solid #000; */
+}
+
+.navlist {
+    /* border: 1px solid #000; */
+    margin-right: 50px;
+    height: 80px;
+    width: auto;
+    display: flex;
+    padding: 5px 0;
+}
+
+.navlist .link {
+    padding: 0 15px;
+    height: 70px;
+    font-family: var(--montserrat);
+    color: var(--mainTxt);
+    text-decoration: none;
+    line-height: 70px;
+    text-align: center;
+    position: relative;
+}
+
+.navlist .link::before {
+    content: '';
+    width: 100%;
+    height: 70px;
+    left: 0;
+    background: var(--accentTxt);
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: all 0.2s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.navlist .link:hover {
+    color: var(--thTxt);
+}
+
+.navlist .link:hover::before {
+    transform: scaleY(1);
+    transform-origin: bottom;
+}
+
+
+.btn-container {
+    margin: 5px 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.redirectBtn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: var(--montserrat);
+    transition: all 0.2s ease;
+}
+
+.storeBtn {
+    background: var(--mainBtnBg);
+    color: var(--thTxt);
+}
+
+.storeBtn:hover {
+    background: var(--accentTxt);
+}
+
+.bookingBtn {
+    background: var(--btnBg);
+    color: var(--darkTxt);
+}
+
+/* Start footer */
+.footer-container {
+    width: 100%;
+    height: 400px;
+    padding: 50px 40px;
+    /* background: var(--sctBg); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--montserrat);
+}
+
+.socials {
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-social-logo {
+    width: 250px;
+    height: 250px;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.mediaLink {
+    color: var(--mainTxt)
+}
+
+.mediaIcon {
+    transition: all 0.2s ease;
+    height: 40px;
+}
+
+.media-wsp:hover {
+    transition: all 0.2s ease;
+    color: var(--wsp-bg);
+}
+
+.media-ig:hover {
+    color : var(--igm-bg);
+}
+
+.media-fb:hover {
+    transition: all .2s ease;
+    color: var(--fcb-bg);
+}
+
+.media-ld:hover {
+    transition: all 0.2s ease;
+    color: var(--ldn-bg);
+}
+
+/* Navigation Footer Section */
+.links-container {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 10px;
+}
+
+.linksTitle {
+    width: 100%;
+    height: 50px;
+}
+
+.linkList {
+    list-style: none;
+}
+
+.linkList .itemlink {
+    text-decoration: none;
+    color: var(--mainTxt);
+    transition: .3s ease;
+}
+
+.linkList .itemlink:hover {
+    color: var(--accentTxt2);
+}
+
+
+/*  STATIC NAVBAR THAT WILL BLE PLACE ABOVE HERO SHOP SECTION */
+.static-navbar {
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.281);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-family: var(--montserrat);
+}
+
+.brandName {
+    color: var(--thTxt);
+    font-family: var(--unbounded);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    color: var(--thTxt);
+}
+
+.link {
+    color: var(--thTxt);
+    text-decoration: none;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.link:hover {
+    color: var(--creamyTxt);
+}
+
+/*
+
+===============================
+UserNav that shows in register and login pages, it is the same as the default navbar, but  with some changes.
+===============================
+*/
+.user-nav-container {
+    width: 100%;
+    height: 70px;
+    background: var(--accentTxt);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    font-family: var(--montserrat);
+    /*border-bottom: 1px solid black;*/
+    box-shadow: 0px 5px 5px #808080;
+    color: var(--thTxt);
+}
+
+.brandName {
+    color: var(--mainTxt);
+    font-family: var(--unbounded);
+}
+
+.navlist {
+    height: 70px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style: none;
+}
+
+.itemlink {
+    color: var(--mainTxt);
+    text-decoration: none;
+    transition: all .2s ease;
+    cursor: pointer;
+}
+
+.itemlink:hover {
+    color: var(--creamyTxt);
+}

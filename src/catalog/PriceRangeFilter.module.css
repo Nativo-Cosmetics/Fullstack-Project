@@ -1,0 +1,43 @@
+.rangeFilter {
+  display: grid;
+  gap: 18px;
+}
+
+.inputsRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.label {
+  display: grid;
+  gap: 8px;
+  font-family: var(--montserrat);
+  font-size: 0.9rem;
+  color: var(--mainTxt);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  font-family: var(--montserrat);
+  color: var(--mainTxt);
+}
+
+.sliders {
+  display: grid;
+  gap: 10px;
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--accentTxt2);
+}
+
+.priceRange {
+  color: var(--headTxt);
+  font-family: var(--montserrat);
+  font-size: 0.95rem;
+}
