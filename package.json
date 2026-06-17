@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "start": "node src/server.js",
     "server": "node src/server.js",
-    "seed": "node src/seeder/seedProducts.js"
+    "seed": "node src/seeder/seedProducts.js",
+    "seed:services": "node src/seeder/seedServicesAndAvailability.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
