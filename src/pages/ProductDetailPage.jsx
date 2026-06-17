@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Navbar from '../components/navigation/navbar.jsx'
-import ProductDetail from '../catalog/ProductDetail.jsx'
-import { fetchProductById } from '../catalog/api.js'
+import ProductDetail from '../components/catalog/ProductDetail.jsx'
+import { fetchProductById } from '../components/catalog/api.js'
 import styles from './ProductDetailPage.module.css'
 
 const ProductDetailPage = () => {

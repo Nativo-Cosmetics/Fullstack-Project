@@ -3,12 +3,12 @@ import { useSearchParams, useNavigate, Link } from 'react-router-dom'
 
 
 import Navbar from '../components/navigation/navbar.jsx'
-import SearchBar from '../catalog/SearchBar.jsx'
-import FiltersSidebar from '../catalog/FiltersSidebar.jsx'
-import SortSelector from '../catalog/SortSelector.jsx'
-import ProductGrid from '../catalog/ProductGrid.jsx'
-import Pagination from '../catalog/Pagination.jsx'
-import { fetchProducts, fetchCategoriesSummary } from '../catalog/api.js'
+import SearchBar from '../components/catalog/SearchBar.jsx'
+import FiltersSidebar from '../components/catalog/FiltersSidebar.jsx'
+import SortSelector from '../components/catalog/SortSelector.jsx'
+import ProductGrid from '../components/catalog/ProductGrid.jsx'
+import Pagination from '../components/catalog/Pagination.jsx'
+import { fetchProducts, fetchCategoriesSummary } from '../components/catalog/api.js'
 import styles from './CatalogPage.module.css'
 
 const DEFAULT_LIMIT = 16

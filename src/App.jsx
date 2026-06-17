@@ -6,8 +6,8 @@ import ProductDetailPage from './pages/ProductDetailPage.jsx'
 import Register from './pages/register.jsx'
 import UserPage from './pages/userPage.jsx'
 import Checkout from './pages/paymentPage.jsx'
-import AdminProducts from './admin/AdminProducts.jsx'
-import AdminReports from './admin/AdminReports.jsx'
+import AdminProductsPage from './components/admin/AdminProductsPage.jsx'
+import AdminReportsPage from './components/admin/AdminReportsPage.jsx'
 import ProductViewPage from './pages/productViewPage.jsx'
 
 import './global.css'
@@ -24,8 +24,8 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/user/*' element={<UserPage />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/admin/productos' element={<AdminProducts />} />
-        <Route path='/admin/reportes' element={<AdminReports />} />
+        <Route path='/admin/productos' element={<AdminProductsPage />} />
+        <Route path='/admin/reportes' element={<AdminReportsPage />} />
         <Route path='/product' element={<ProductViewPage />} />
       </Routes>
     </>

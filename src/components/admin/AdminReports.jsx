@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { fetchProducts } from '../catalog/api.js'
+import './AdminShared.css'
 import './AdminReports.css'
 
 const AdminReports = () => {
@@ -47,11 +47,6 @@ const AdminReports = () => {
 
   return (
     <div className='admin-container report-view'>
-      <nav className='admin-nav no-print'>
-        <Link to='/admin/productos' className='nav-link'>Productos</Link>
-        <Link to='/admin/reportes' className='nav-link active'>Reportes</Link>
-      </nav>
-
       <header className='admin-header'>
         <h1>Reportes del Sistema</h1>
         <button className='btn-print no-print' onClick={handlePrint}>
