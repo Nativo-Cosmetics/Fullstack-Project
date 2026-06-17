@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom';
 import UserNav from '../navigation/userNav';
 import CartLogo from '../../assets/icons/cart-2-svgrepo-com.svg'
 import './cart.css'
-import { useNavigate } from 'react-router-dom';
 
 // ─── Datos de ejemplo (reemplazar por los datos reales cuando el backend esté listo) ───
 const MOCK_PRODUCTS = [
@@ -42,24 +42,18 @@ function Cart() {
   const selectedProducts = products.filter(p => p.selected);
   const subtotal = selectedProducts.reduce((acc, p) => acc + p.price * p.quantity, 0);
 
-  // ── Navegar al checkout pasando los productos seleccionados ──
   const handleCheckout = () => {
-    navigate('/payment', {
-      state: {
-        selectedProducts,
-        subtotal,
-      }
+    navigate('/user/payment', {
+      state: { selectedProducts, subtotal }
     });
   };
 
   return (
     <>
-      <UserNav />
       <div>
-
         {/* Título */}
         <div className='title-container'>
-          <img src={CartLogo} alt="logo para carrito" width='105px' />
+          <img src={CartLogo} alt="logo para carrito" width='100px' />
           <div className='title-cart'>
             <h1>Carrito De Compras</h1>
           </div>
@@ -68,7 +62,6 @@ function Cart() {
         <br />
 
         <div className='cart-container'>
-
           {/* ─── Lista de productos ─── */}
           <div className='products-list'>
             {products.length === 0 ? (
@@ -103,9 +96,11 @@ function Cart() {
                       />
                     </div>
 
-                    {/* Nombre */}
+                    {/* Nombre con link a la vista del producto */}
                     <div className='product-name'>
-                      <h2>{product.name}</h2>
+                      <Link to={`/user/product/${product.id}`} className='product-name-link'>
+                        <h2>{product.name}</h2>
+                      </Link>
                     </div>
 
                     {/* Precio */}
@@ -131,7 +126,6 @@ function Cart() {
                         <button onClick={() => changeQuantity(product.id, -1)}>−</button>
                       </div>
                     </div>
-
                   </div>
                 </div>
               ))

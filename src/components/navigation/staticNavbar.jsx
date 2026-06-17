@@ -19,9 +19,11 @@ const StaticNavbar = () => {
           <Link to='/catalogo' className='link'>Catálogo</Link>
         </li>
         <li className="item">
-          <Link to='/profile' className='link'>Mi perfil</Link>
+          <Link to='/user/cart' className='link'>Carrito</Link>
         </li>
-        <li className="item" className='link'>Carrito</li>
+        <li className="item">
+          <Link to='/user/profile' className='link'>Mi perfil</Link>
+        </li>
       </ul>
     </div>
   )

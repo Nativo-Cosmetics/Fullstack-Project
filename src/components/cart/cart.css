@@ -346,3 +346,13 @@
   color: #aaa;
   cursor: not-allowed;
 }
+
+.product-name-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-name-link:hover h2 {
+  text-decoration: underline;
+  color: #4a7c59;
+}

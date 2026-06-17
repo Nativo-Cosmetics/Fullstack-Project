@@ -9,7 +9,6 @@ const Profile = () => {
   const [opcionSeleccionada, setOpcionSeleccionada] = useState("inicio");
   return (
     <>
-    <UserNav/>
     <div className='profile-page'>      
       <div className="container-profile">
         <aside className="sidebar-profile">
@@ -20,6 +19,11 @@ const Profile = () => {
 
           <button onClick={() => setOpcionSeleccionada("pedidos")}>
             Mis pedidos
+          </button>
+
+
+          <button onClick={() => setOpcionSeleccionada("reservas")}>
+            Mis reseñas
           </button>
 
           <button onClick={() => setOpcionSeleccionada("reseñas")}>
@@ -38,6 +42,13 @@ const Profile = () => {
           {opcionSeleccionada === "pedidos" && (
             <div>
               <h2>Mis Productos</h2>
+              <p>Aquí van los productos.</p>
+            </div>
+          )}
+
+          {opcionSeleccionada === "reservas" && (
+            <div>
+              <h2>Mis Reservas</h2>
               <p>Aquí van los productos.</p>
             </div>
           )}
