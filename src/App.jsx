@@ -9,6 +9,8 @@ import Checkout from './pages/paymentPage.jsx'
 import AdminProductsPage from './components/admin/AdminProductsPage.jsx'
 import AdminReportsPage from './components/admin/AdminReportsPage.jsx'
 import ProductViewPage from './pages/productViewPage.jsx'
+import ReservarPage from './pages/ReservarPage.jsx'
+import MisReservasPage from './pages/MisReservasPage.jsx'
 
 import './global.css'
 
@@ -27,6 +29,8 @@ function App() {
         <Route path='/admin/productos' element={<AdminProductsPage />} />
         <Route path='/admin/reportes' element={<AdminReportsPage />} />
         <Route path='/product' element={<ProductViewPage />} />
+        <Route path='/reservar' element={<ReservarPage />} />
+        <Route path='/mis-reservas' element={<MisReservasPage />} />
       </Routes>
     </>
   )

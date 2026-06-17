@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
         <div className="btn-container">
             <Link className='redirectBtn storeBtn' to='/register'>Iniciar sesión</Link>
-            <Link className='redirectBtn bookingBtn' to='/'>Agenda tu hora!</Link>
+            <Link className='redirectBtn bookingBtn' to='/reservar'>Agenda tu hora!</Link>
         </div>
         </div>
     </div>

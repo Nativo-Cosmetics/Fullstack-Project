@@ -3,6 +3,7 @@ import { useSearchParams, useNavigate, Link } from 'react-router-dom'
 
 
 import Navbar from '../components/navigation/navbar.jsx'
+import Footer from '../components/navigation/footer.jsx'
 import SearchBar from '../components/catalog/SearchBar.jsx'
 import FiltersSidebar from '../components/catalog/FiltersSidebar.jsx'
 import SortSelector from '../components/catalog/SortSelector.jsx'
@@ -192,6 +193,7 @@ const CatalogPage = () => {
           </section>
         </div>
       </main>
+      <Footer />
     </>
   )
 }

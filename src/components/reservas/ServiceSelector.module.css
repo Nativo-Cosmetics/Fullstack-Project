@@ -1,0 +1,26 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-family: var(--montserrat);
+  color: var(--mainTxt);
+  font-weight: 600;
+}
+
+.select {
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: #fff;
+  font-family: var(--montserrat);
+  color: var(--headTxt);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.select:focus {
+  border-color: var(--accentTxt);
+}

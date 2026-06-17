@@ -1,0 +1,82 @@
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 24px;
+  background: #fff;
+  padding: 22px;
+  display: grid;
+  gap: 16px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status {
+  align-self: flex-start;
+  padding: 6px 14px;
+  background: rgba(127, 138, 87, 0.12);
+  color: var(--accentTxt2);
+  border-radius: 999px;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.serviceName {
+  margin: 0;
+  font-family: var(--trirong);
+  color: var(--mainTxt);
+}
+
+.details {
+  margin: 0;
+  color: var(--headTxt);
+}
+
+.meta {
+  display: grid;
+  gap: 8px;
+  color: var(--headTxt);
+  font-family: var(--montserrat);
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.actionButton,
+.cancelButton {
+  flex: 1;
+  border: none;
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.actionButton {
+  background: var(--accentTxt2);
+  color: #fff;
+}
+
+.cancelButton {
+  background: #f44336;
+  color: #fff;
+}
+
+.actionButton:hover,
+.cancelButton:hover {
+  transform: translateY(-1px);
+}
+
+.actionButton:disabled,
+.cancelButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

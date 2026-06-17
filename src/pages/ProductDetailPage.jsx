@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Navbar from '../components/navigation/navbar.jsx'
+import Footer from '../components/navigation/footer.jsx'
 import ProductDetail from '../components/catalog/ProductDetail.jsx'
 import { fetchProductById } from '../components/catalog/api.js'
 import styles from './ProductDetailPage.module.css'
@@ -50,6 +51,7 @@ const ProductDetailPage = () => {
           </>
         )}
       </main>
+      <Footer />
     </>
   )
 }

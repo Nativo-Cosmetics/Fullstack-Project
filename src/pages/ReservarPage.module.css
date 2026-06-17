@@ -1,0 +1,89 @@
+.page {
+  min-height: 100vh;
+  background: var(--scndBgSct);
+  padding: 48px 32px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-family: var(--trirong);
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--mainTxt);
+  margin: 0 0 12px 0;
+}
+
+.subtitle {
+  font-family: var(--montserrat);
+  color: var(--headTxt);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.status {
+  text-align: center;
+  padding: 24px;
+  background: #fff;
+  border-radius: 24px;
+  color: var(--headTxt);
+}
+
+.content {
+  display: grid;
+  gap: 24px;
+}
+
+.formSection {
+  display: grid;
+  gap: 24px;
+}
+
+.step {
+  background: #fff;
+  border-radius: 24px;
+  padding: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.stepTitle {
+  margin: 0 0 18px 0;
+  font-family: var(--montserrat);
+  font-weight: 700;
+  color: var(--mainTxt);
+}
+
+.errorBanner {
+  background: #ffebee;
+  border: 1px solid #ef5350;
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: #c62828;
+  font-family: var(--montserrat);
+}
+
+.successBanner {
+  background: #e8f5e9;
+  border: 1px solid #66bb6a;
+  border-radius: 16px;
+  padding: 16px 20px;
+  color: #2e7d32;
+  font-family: var(--montserrat);
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding: 32px 16px;
+  }
+
+  .step {
+    padding: 20px;
+  }
+}
